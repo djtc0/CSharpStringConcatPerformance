@@ -53,6 +53,12 @@
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MultiTypeStringBuilderLib\MultiTypeStringBuilderLib.csproj">
+      <Project>{c30fc2ca-93b8-4f0f-b100-05a5eb9e0a87}</Project>
+      <Name>MultiTypeStringBuilderLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

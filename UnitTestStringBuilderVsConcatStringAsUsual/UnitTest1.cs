@@ -10,7 +10,7 @@ namespace UnitTestStringBuilderVsConcatStringAsUsual
         public void TestConcatStringAsUsual()
         {
             //Arranje
-          
+            MultiTypeStringBuilderLib.MultiTypeStringBuilder multiTypeStringBuilder = new MultiTypeStringBuilderLib.MultiTypeStringBuilder();
             //Act
 
             //Assert
