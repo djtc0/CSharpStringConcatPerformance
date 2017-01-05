@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestStringBuilderVsConcatStringAsUsual", "UnitTestStringBuilderVsConcatStringAsUsual\UnitTestStringBuilderVsConcatStringAsUsual.csproj", "{54D64B2B-6307-4FD7-B524-7F850C26F287}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestMultipleWaysOfConcatenatingStrings", "UnitTestStringBuilderVsConcatStringAsUsual\UnitTestMultipleWaysOfConcatenatingStrings.csproj", "{54D64B2B-6307-4FD7-B524-7F850C26F287}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiTypeStringBuilderLib", "MultiTypeStringBuilderLib\MultiTypeStringBuilderLib.csproj", "{C30FC2CA-93B8-4F0F-B100-05A5EB9E0A87}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleWaysOfConcatenatingStrings", "MultiTypeStringBuilderLib\MultipleWaysOfConcatenatingStrings.csproj", "{C30FC2CA-93B8-4F0F-B100-05A5EB9E0A87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
