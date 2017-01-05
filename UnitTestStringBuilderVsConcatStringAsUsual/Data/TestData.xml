@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <Rows>
   <Row>
-    <A1>1</A1>
-    <A2>1</A2>
-    <Result>2</Result>
+    <inputString>daniel</inputString>
+    <stringToAppend> Carrilho</stringToAppend>
+    <Result>daniel Carrilho</Result>
   </Row>
   <Row>
-    <A1>1</A1>
-    <A2>2</A2>
-    <Result>3</Result>
+    <inputString>coiso</inputString>
+    <stringToAppend>coiso</stringToAppend>
+    <Result>coisocoiso</Result>
   </Row>
 </Rows>

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultiTypeStringBuilderLib
+namespace MultipleWaysOfConcatenatingStringsLib
 {
-    public class MultiTypeStringBuilder
+    public class MultipleWaysOfConcatenatingStrings
     {
         public string ShortStringConcatUsingStringBuilder(String inputString, string stringToAppend)
         {
