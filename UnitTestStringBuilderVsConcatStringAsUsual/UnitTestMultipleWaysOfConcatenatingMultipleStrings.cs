@@ -4,10 +4,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestMultipleWaysOfConcatenatingStrings
 {
     [TestClass]
-    public class UnitTestMultipleWaysOfConcatenatingLongStrings
+    public class UnitTestMultipleWaysOfConcatenatingMultipleStrings
     {
         [TestMethod]
-        public void TestLongStringConcatUsingStringBuilder()
+        public void TestMultipleConcatUsingStringBuilder()
         {
             //Arranje
             MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multipleWaysOfConcatenatingStrings = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
@@ -19,7 +19,7 @@ namespace UnitTestMultipleWaysOfConcatenatingStrings
         }
 
         [TestMethod]
-        public void TestLongStringConcatUsingPlusOperator()
+        public void TestMultipleConcatUsingPlusOperator()
         {
             //Arranje
             MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multipleWaysOfConcatenatingStrings = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
@@ -41,7 +41,7 @@ namespace UnitTestMultipleWaysOfConcatenatingStrings
         }
 
         [TestMethod]
-        public void TestLongStringConcatUsingStringConcat()
+        public void TestMultipleConcatUsingStringConcat()
         {
             //Arranje
             MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multipleWaysOfConcatenatingStrings = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
@@ -52,7 +52,7 @@ namespace UnitTestMultipleWaysOfConcatenatingStrings
         }
 
         [TestMethod]
-        public void TestLongStringConcatUsingStringJoin()
+        public void TestMultipleConcatUsingStringJoin()
         {
             //Arranje
             MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multipleWaysOfConcatenatingStrings = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
@@ -63,7 +63,7 @@ namespace UnitTestMultipleWaysOfConcatenatingStrings
         }
 
         [TestMethod]
-        public void TestLongStringConcatUsingStringAggregate()
+        public void TestMultipleConcatUsingStringAggregate()
         {
             //Arranje
             MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multipleWaysOfConcatenatingStrings = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();

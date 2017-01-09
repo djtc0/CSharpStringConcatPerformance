@@ -51,8 +51,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTestMultipleWaysOfConcatenatingLongStrings.cs" />
-    <Compile Include="UnitTestMultipleWaysOfConcatenatingShortStrings.cs" />
+    <Compile Include="UnitTestMultipleWaysOfConcatenatingMultipleStrings.cs" />
+    <Compile Include="UnitTestMultipleWaysOfConcatenatingTwoStrings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

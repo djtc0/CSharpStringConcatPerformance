@@ -104,7 +104,7 @@ MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multiTy
             MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multiTypeStringBuilder = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
 
             //Act
-            multiTypeStringBuilder.CollectDataFromLongRunOffBothStringBuilderAndConcatStringAsUsualCustomTiming(1000);
+            multiTypeStringBuilder.CollectDataFromLongRunOffBothStringBuilderAndConcatStringAsUsualCustomPreformanceTiming(1000);
 
             //Assert
         }
