@@ -8,7 +8,7 @@ namespace MultipleWaysOfConcatenatingStringsLib
 {
     public class MultipleWaysOfConcatenatingStrings
     {
-        public string ShortStringConcatUsingStringBuilder(String inputString, string stringToAppend)
+        public string TwoStringConcatUsingStringBuilder(String inputString, string stringToAppend)
         {
             StringBuilder sb = new StringBuilder(inputString);
             sb.Append(stringToAppend);
@@ -16,25 +16,25 @@ namespace MultipleWaysOfConcatenatingStringsLib
             return result;
         }
 
-        public string ShortStringConcatUsingPlusOperator(String inputString, string stringToAppend)
+        public string TwoStringConcatUsingPlusOperator(String inputString, string stringToAppend)
         {
             inputString  += stringToAppend;
             return inputString;
         }
 
-        public string ShortStringConcatUsingStringFormat(String inputString, string stringToAppend)
+        public string TwoStringConcatUsingStringFormat(String inputString, string stringToAppend)
         {
             string result = String.Format("{0}{1}", inputString, stringToAppend);
             return result;
         }
 
-        public string ShortStringConcatUsingStringConcat(String inputString, string stringToAppend)
+        public string TwoStringConcatUsingStringConcat(String inputString, string stringToAppend)
         {
             String result = String.Concat(inputString, stringToAppend);
             return result;
         }
 
-        public string ShortStringConcatUsingStringJoin(String inputString, string stringToAppend)
+        public string TwoStringConcatUsingStringJoin(String inputString, string stringToAppend)
         {
             //does not enter on the validation of the string concatenation performance
             List<String> strings = new List<string>();
@@ -47,7 +47,7 @@ namespace MultipleWaysOfConcatenatingStringsLib
         }
 
         //fastest
-        public string LongStringConcatUsingStringBuilder(string stringToAppend, int repeats)
+        public string MultipleConcatUsingStringBuilder(string stringToAppend, int repeats)
         {
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < repeats; i++)
@@ -60,7 +60,7 @@ namespace MultipleWaysOfConcatenatingStringsLib
         }
 
         //slowest
-        public string LongStringConcatUsingPlusOperator(string stringToAppend, int repeats)
+        public string MultipleConcatUsingPlusOperator(string stringToAppend, int repeats)
         {
             String result = "";
             for (int i = 0; i < repeats; i++)
@@ -70,7 +70,7 @@ namespace MultipleWaysOfConcatenatingStringsLib
             return result;
         }
 
-        public string LongStringConcatUsingStringFormat(string stringToAppend, int repeats)
+        public string MultipleConcatUsingStringFormat(string stringToAppend, int repeats)
         {
             String result = "";
             for (int i = 0; i < repeats; i++)
@@ -80,7 +80,7 @@ namespace MultipleWaysOfConcatenatingStringsLib
             return result;
         }
 
-        public string LongStringConcatUsingStringConcat(string stringToAppend, int repeats)
+        public string MultipleConcatUsingStringConcat(string stringToAppend, int repeats)
         {
             String result = "";
             for (int i = 0; i < repeats; i++)
@@ -90,7 +90,7 @@ namespace MultipleWaysOfConcatenatingStringsLib
             return result;
         }
 
-        public string LongStringConcatUsingStringJoin(string stringToAppend, int repeats)
+        public string MultipleConcatUsingStringJoin(string stringToAppend, int repeats)
         {
             List<String> listOfString = new List<string>();
             for (int i = 0; i < repeats; i++)
@@ -106,7 +106,7 @@ namespace MultipleWaysOfConcatenatingStringsLib
             return result;
         }
 
-        public string LongStringConcatUsingStringAggregate(string stringToAppend, int repeats)  
+        public string MultipleConcatUsingStringAggregate(string stringToAppend, int repeats)  
         {
             List<String> listOfString = new List<string>();
             for (int i = 0; i < repeats; i++)
@@ -119,20 +119,20 @@ namespace MultipleWaysOfConcatenatingStringsLib
             return result;
         }
 
-        public string StringConcatTwoLongStringsUsingPlusOperator()
+        public string ConcatTwoLongStringsUsingPlusOperator()
         {
-            string s1 = LongStringConcatUsingStringBuilder("a", 10000);
-            string s2 = LongStringConcatUsingStringBuilder("a", 10000);
+            string s1 = MultipleConcatUsingStringBuilder("a", 10000);
+            string s2 = MultipleConcatUsingStringBuilder("a", 10000);
 
             string result = s1 + s2;
 
             return result;
         }
 
-        public string StringBuilderConcatTwoLongStrings()
+        public string ConcatTwoLongStringsUsingStringBuilder()
         {
-            StringBuilder sb1 = new StringBuilder(LongStringConcatUsingStringBuilder("a", 10000));
-            StringBuilder sb2 = new StringBuilder(LongStringConcatUsingStringBuilder("a", 10000));
+            StringBuilder sb1 = new StringBuilder(MultipleConcatUsingStringBuilder("a", 10000));
+            StringBuilder sb2 = new StringBuilder(MultipleConcatUsingStringBuilder("b", 10000));
             sb1.Append(sb2);
             return sb1.ToString();
         }
@@ -141,13 +141,13 @@ namespace MultipleWaysOfConcatenatingStringsLib
         {
             for (int i = 0; i < howManyRuns; i++)
             {
-                LongStringConcatUsingStringBuilder("a", 10000);
-                LongStringConcatUsingPlusOperator("a", 10000);
+                MultipleConcatUsingStringBuilder("a", 10000);
+                MultipleConcatUsingPlusOperator("a", 10000);
 
             }
         }
 
-        public void CollectDataFromLongRunOffBothStringBuilderAndConcatStringAsUsualCustomTiming(int howManyRuns)
+        public void CollectDataFromLongRunOffBothStringBuilderAndConcatStringAsUsualCustomPreformanceTiming(int howManyRuns)
         {
             double[] timingsStringBuilderConcat = new double[howManyRuns];
             double[] timingsConcatAsUsual = new double[howManyRuns];
@@ -156,12 +156,12 @@ namespace MultipleWaysOfConcatenatingStringsLib
             for (int i = 0; i < howManyRuns; i++)
             {
                 before = DateTime.Now;                
-                LongStringConcatUsingStringBuilder("a", 10000);
+                MultipleConcatUsingStringBuilder("a", 10000);
                 after = DateTime.Now;
                 timingsStringBuilderConcat[i] = (after - before).TotalMilliseconds;
 
                 before = DateTime.Now;
-                LongStringConcatUsingPlusOperator("a", 10000);
+                MultipleConcatUsingPlusOperator("a", 10000);
                 after = DateTime.Now;
                 timingsConcatAsUsual[i] = (after - before).TotalMilliseconds;
             }

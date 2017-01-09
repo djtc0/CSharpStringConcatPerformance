@@ -12,7 +12,7 @@ namespace UnitTestMultipleWaysOfConcatenatingStrings
             //Arranje
             MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multipleWaysOfConcatenatingStrings = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
             //Act
-            string result = multipleWaysOfConcatenatingStrings.LongStringConcatUsingStringBuilder("a", 10000);
+            string result = multipleWaysOfConcatenatingStrings.MultipleConcatUsingStringBuilder("a", 10000);
             //Assert
             //Assert.AreEqual(result, "?");
             Assert.AreEqual(result.Length, 10000);
@@ -24,7 +24,7 @@ namespace UnitTestMultipleWaysOfConcatenatingStrings
             //Arranje
             MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multipleWaysOfConcatenatingStrings = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
             //Act
-            string result = multipleWaysOfConcatenatingStrings.LongStringConcatUsingPlusOperator("a", 10000);
+            string result = multipleWaysOfConcatenatingStrings.MultipleConcatUsingPlusOperator("a", 10000);
             //Assert
             Assert.AreEqual(result.Length, 10000);
         }
@@ -35,29 +35,29 @@ namespace UnitTestMultipleWaysOfConcatenatingStrings
             //Arranje
             MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multipleWaysOfConcatenatingStrings = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
             //Act
-            string result = multipleWaysOfConcatenatingStrings.LongStringConcatUsingStringFormat("a", 10000);
+            string result = multipleWaysOfConcatenatingStrings.MultipleConcatUsingStringFormat("a", 10000);
             //Assert
             Assert.AreEqual(result.Length, 10000);
         }
 
         [TestMethod]
-        public void LongStringConcatUsingStringConcat()
+        public void TestLongStringConcatUsingStringConcat()
         {
             //Arranje
             MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multipleWaysOfConcatenatingStrings = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
             //Act
-            string result = multipleWaysOfConcatenatingStrings.LongStringConcatUsingStringConcat("a", 10000);
+            string result = multipleWaysOfConcatenatingStrings.MultipleConcatUsingStringConcat("a", 10000);
             //Assert
             Assert.AreEqual(result.Length, 10000);
         }
 
         [TestMethod]
-        public void LongStringConcatUsingStringJoin()
+        public void TestLongStringConcatUsingStringJoin()
         {
             //Arranje
             MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multipleWaysOfConcatenatingStrings = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
             //Act
-            string result = multipleWaysOfConcatenatingStrings.LongStringConcatUsingStringJoin("a", 10000);
+            string result = multipleWaysOfConcatenatingStrings.MultipleConcatUsingStringJoin("a", 10000);
             //Assert
             Assert.AreEqual(result.Length, 10000);
         }
@@ -68,7 +68,7 @@ namespace UnitTestMultipleWaysOfConcatenatingStrings
             //Arranje
             MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multipleWaysOfConcatenatingStrings = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
             //Act
-            string result = multipleWaysOfConcatenatingStrings.LongStringConcatUsingStringAggregate("a", 10000);
+            string result = multipleWaysOfConcatenatingStrings.MultipleConcatUsingStringAggregate("a", 10000);
             //Assert
             Assert.AreEqual(result.Length, 10000);
         }

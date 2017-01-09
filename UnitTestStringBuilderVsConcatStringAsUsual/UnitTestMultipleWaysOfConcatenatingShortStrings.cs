@@ -13,14 +13,27 @@ namespace UnitTestMultipleWaysOfConcatenatingStrings
             get { return myTestContext; }
             set { myTestContext = value; }
         }
-        
+
+        //[TestMethod]
+        [DeploymentItem(@"Data\TestData.xml")]
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML", @"|DataDirectory|\TestData.xml", "Row", DataAccessMethod.Sequential)]
+        public void TestXMLDataDrivenShortStringConcatUsingPlusOperator()
+        {
+            //Arranje
+            MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multiTypeStringBuilder = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
+            //Act
+            string result = multiTypeStringBuilder.TwoStringConcatUsingPlusOperator((String)TestContext.DataRow["inputString"], (String)TestContext.DataRow["stringToAppend"]);
+            //Assert
+            Assert.AreEqual(result, TestContext.DataRow["Result"]);
+        }
+
         //[TestMethod]
         public void TestShortStringConcatUsingPlusOperator()
         {
             //Arranje
 MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multiTypeStringBuilder = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
             //Act
-            string result = multiTypeStringBuilder.ShortStringConcatUsingPlusOperator("Daniel", " Carrilho");
+            string result = multiTypeStringBuilder.TwoStringConcatUsingPlusOperator("Daniel", " Carrilho");
             //Assert
             Assert.AreEqual(result, "Daniel Carrilho");
         }
@@ -31,7 +44,7 @@ MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multiTy
             //Arranje
             MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multiTypeStringBuilder = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
             //Act
-            string result = multiTypeStringBuilder.ShortStringConcatUsingStringBuilder("Daniel", " Carrilho");
+            string result = multiTypeStringBuilder.TwoStringConcatUsingStringBuilder("Daniel", " Carrilho");
             //Assert
             Assert.AreEqual(result, "Daniel Carrilho");
         }
@@ -42,7 +55,7 @@ MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multiTy
             //Arranje
             MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multiTypeStringBuilder = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
             //Act
-            string result = multiTypeStringBuilder.ShortStringConcatUsingStringConcat("Daniel", " Carrilho");
+            string result = multiTypeStringBuilder.TwoStringConcatUsingStringConcat("Daniel", " Carrilho");
             //Assert
             Assert.AreEqual(result, "Daniel Carrilho");
         }
@@ -53,7 +66,7 @@ MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multiTy
             //Arranje
             MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multiTypeStringBuilder = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
             //Act
-            string result = multiTypeStringBuilder.ShortStringConcatUsingStringFormat("Daniel", " Carrilho");
+            string result = multiTypeStringBuilder.TwoStringConcatUsingStringFormat("Daniel", " Carrilho");
             //Assert
             Assert.AreEqual(result, "Daniel Carrilho");
         }
@@ -64,23 +77,12 @@ MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multiTy
             //Arranje
             MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multipleWaysOfConcatenatingStrings = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
             //Act
-            string result = multipleWaysOfConcatenatingStrings.ShortStringConcatUsingStringJoin("Daniel", " Carrilho");
+            string result = multipleWaysOfConcatenatingStrings.TwoStringConcatUsingStringJoin("Daniel", " Carrilho");
             //Assert
             Assert.AreEqual(result, "Daniel Carrilho");
         }
         
-        //[TestMethod]
-        [DeploymentItem(@"Data\TestData.xml")]
-        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML", @"|DataDirectory|\TestData.xml", "Row", DataAccessMethod.Sequential)]
-        public void TestXMLDataDrivenShortStringConcatUsingPlusOperator()
-        {
-            //Arranje
-            MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multiTypeStringBuilder = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
-            //Act
-            string result = multiTypeStringBuilder.ShortStringConcatUsingPlusOperator((String)TestContext.DataRow["inputString"], (String)TestContext.DataRow["stringToAppend"]);
-            //Assert
-            Assert.AreEqual(result, TestContext.DataRow["Result"]);
-        }
+       
 
             
         //[TestMethod]
