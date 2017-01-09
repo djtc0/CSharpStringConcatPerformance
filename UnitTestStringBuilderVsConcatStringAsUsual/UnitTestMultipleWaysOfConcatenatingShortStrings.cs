@@ -62,9 +62,9 @@ MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multiTy
         public void TestShortStringConcatUsingStringJoin()
         {
             //Arranje
-            MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multiTypeStringBuilder = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
+            MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings multipleWaysOfConcatenatingStrings = new MultipleWaysOfConcatenatingStringsLib.MultipleWaysOfConcatenatingStrings();
             //Act
-            string result = multiTypeStringBuilder.ShortStringConcatUsingStringJoin("Daniel", " Carrilho");
+            string result = multipleWaysOfConcatenatingStrings.ShortStringConcatUsingStringJoin("Daniel", " Carrilho");
             //Assert
             Assert.AreEqual(result, "Daniel Carrilho");
         }
