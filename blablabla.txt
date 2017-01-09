@@ -1,0 +1,27 @@
+StringBuilder.Append vs + operator? a c# performance matter and a wish for a great, healthy, happy and Agile new 2017. :)
+
+I was upgrading my SOLID c# project (part of the agile developer training i deliver). I was upgrading the D principal, the Dependency inversion principal. I diverged a little and started to play wih a coding kata (that is also part of my agile training for developers). This coding Kata has a lenghty string concatenation as part of the implementation of it´s user story... 
+
+While i was coding, i realized that i was using + operator (+=) as the string concatenator and i remembered that i should use StringBuilder. As such i duplicated the code that was written using the + operator and made a copy using StringBuilder instead. Using Visual Studio 2015, that comes with performance in mind as you code, i compared the processing time of a single and simple string concatenation times 10000 using both method and the difference is simply huge! [see image 1]
+
+****
+They are actually as i know at least 4 ways to concatenate strings in C#: +, Sring.Concat, String.Format, SringBuilder.Append. (there is other ways for sure like if a string is treated as a collection of char or if there is a collection of strings to concatenate one may use String.Join() 
+****
+
+As stated in this msdn article updated in July 2015 (not bad)
+https://msdn.microsoft.com/en-us/library/ms228504.aspx, one should use StringBuilder.Append instead of any other method as the best performant way to concatenate and build a string in a loop.
+
+Anywway it is not only about string concatenation performance i am concerned with, it is also about how concerned developers are with those matters when they are coding! I am concerned about how young developers are tough about those matters. Great developers will always be more agile and implicitly concerned not only with code quality but also with code performance. 1ms times 1M requests is a lot of time! :) so lets deep dive.
+
+As starter let´s compare how StringBuilder and + operator will behave and perform when concatenating 10K chars 1 at a time.
+
+The first run is quite ilucidating: 1ms vs 346ms, what? ok, this is not statistically viable, my CPU is doing a lot of diferent things and so one...
+
+
+
+
+
+ 
+
+
+
